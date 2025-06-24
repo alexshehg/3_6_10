@@ -1,0 +1,9 @@
+import time
+import pytest
+from selenium.webdriver.common.by import By
+
+
+def test_visible_button_add_to_cart(browser):
+    browser.get("http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/")
+    time.sleep(30)
+    button = browser.find_element("css selector", ".btn-add-to-basket")
